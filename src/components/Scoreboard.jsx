@@ -2,7 +2,7 @@ import React from "react";
 import {useState} from 'react'
 import Scorebox from "./Scorebox.jsx"
 import Questions from "./Questions.jsx"
-
+import '../assets/styles/scoreboard.css'
 
 
 function Scoreboard(props) {

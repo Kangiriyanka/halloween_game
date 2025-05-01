@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import '../assets/styles/batsu.css';
 function BatsuPopup({ onClose }) {
   const [batsuResult, setBatsuResult] = useState('');
   const [isSpinning, setIsSpinning] = useState(false);

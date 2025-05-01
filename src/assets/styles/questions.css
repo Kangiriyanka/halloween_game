@@ -1,0 +1,50 @@
+/******************************************
+ *  Author : Author
+ *  Created On : 5/1/2025
+ *  File : questions.css
+ ******************************************/
+
+
+ .teamContainer {
+    margin-top: 5px;
+    padding: 5px;
+    font-family: 'Monster Hunter Punch', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-top: 4px rgb(42, 109, 43) dashed;
+    border-bottom: 4px rgb(42, 109, 43) dashed;
+  }
+  
+
+  .triviaQuestion {
+    margin-top: 50px;
+    margin-bottom: -30px;
+    font-size: 50px;
+  
+    
+    font-family: "Monster Hunter Condensed"
+  
+  }
+  
+  .triviaText {
+    font-size: 80px;
+    
+    font-family: "Monster Hunter Condensed";
+    color: rgb(17, 10, 10);
+  }
+  
+  .triviaPoints {
+    font-size: 70px;
+    font-family: "Monster Hunter Condensed";
+    color: rgb(168, 20, 20);
+    box-shadow: #252c49;
+    
+  }
+
+  .next {
+    font-size: 30px;
+    width: 300px;
+    color: rgb(241, 241, 241);
+    background-color: rgb(29, 3, 3);
+}

@@ -1,7 +1,7 @@
 import React, { useState, useRef  } from 'react';
 import BatsuPopUp from './BatsuPopup.jsx';
 import { motion, AnimatePresence } from 'framer-motion';
-import {incrementFiles, batsuFiles,attackFiles } from '../audiofiles.js'
+import {incrementFiles, batsuFiles,attackFiles } from '../assets/audio/audiofiles.js'
 function Scorebox(props) {
   
 

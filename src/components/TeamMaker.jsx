@@ -3,6 +3,7 @@ import { useState } from 'react';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Button from 'react-bootstrap/Button';
 import { motion, AnimatePresence } from 'framer-motion';
+import '../assets/styles/teammaker.css';
 
 /**
  * TeamMaker Component
@@ -77,10 +78,20 @@ function TeamMaker({ onDataReceived, onStartQuiz }) {
 
   return (
     <div>
-      <h1 className="gigantic_header">Happy Halloween Game</h1>
-
-      <div className="teamSelectorBox">
-        <div id="container">
+      <h1 >Happy Halloween Game</h1>
+      <div
+  style={{
+    position: 'relative',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',     // horizontally center children
+   // top-aligned (or 'center' for vertical center)
+    gap: '10px',
+                 // ensures it spans full screen
+    padding: '2rem'
+  }}
+>
+      <div id="container">
           <div id="spooky">
             <div id="body">
               <div id="eyes"></div>
@@ -93,7 +104,9 @@ function TeamMaker({ onDataReceived, onStartQuiz }) {
             </div>
           </div>
           <div id="shadow"></div>
-        </div>
+      </div>
+      <div className="teamSelectorBox">
+       
 
         <h3>How many teams are playing?</h3>
 
@@ -131,6 +144,8 @@ function TeamMaker({ onDataReceived, onStartQuiz }) {
             </motion.button>
           </AnimatePresence>
         )}
+      
+      </div>
       </div>
     </div>
   );
