@@ -3,12 +3,12 @@ import {useState} from 'react'
 import Scorebox from "./Scorebox.jsx"
 import Questions from "./Questions.jsx"
 import '../assets/styles/scoreboard.css'
-
+import questions from '../assets/data/questions.js'
 
 function Scoreboard(props) {
 
   const [points, setPoints] = useState(0); // Initialize points state
-  const [value, setValue] = useState(10)
+  const [value, setValue] = useState(questions[0].points)
   const updatePoints = (newValue) => {
     setValue(newValue);
   };

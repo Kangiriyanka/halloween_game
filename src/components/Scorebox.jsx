@@ -54,15 +54,9 @@ function Scorebox(props) {
     startAnimation()
   };
 
-  const decrementScore = () => {
-    if (score > 0) {
-      setScore(score - props.value);
-    }
 
-    startAnimation()
-  };
 
-  const loseDouble = () => {
+  const losePoints = () => {
 
     const randomAudioSource =
     attackFiles[
@@ -72,7 +66,11 @@ function Scorebox(props) {
 
   attackAudioRef.current.src = randomAudioSource
   attackAudioRef.current.play();
-    if (score > 0) {
+  
+    if (score - props.value < 0 ) {
+      setScore(0);
+    }
+    else if (score - props.value >= 0) {
       setScore(score - props.value);
     }
 
@@ -91,7 +89,7 @@ function Scorebox(props) {
     
     attackAudioRef.current.src = randomAudioSource
     attackAudioRef.current.play();
-    if (score  < 0) {
+    if (score - Math.round(props.value/2) < 0) {
       setScore(0);
     }
     else if (score> 0) {
@@ -118,7 +116,7 @@ function Scorebox(props) {
         Your Score: {score}
       </motion.p>
       <button  className="halloween-button "onClick={incrementScore}>Get Points</button>
-      <button  className="halloween-button" onClick = {loseDouble}> Lose points </button>
+      <button  className="halloween-button" onClick = {losePoints}> Lose points </button>
       <button className="halloween-button" onClick={openBatsuPopUp}>Batsu Time</button>
       <button  className="halloween-button" onClick = {attack}> Attack </button>
       {showBatsuPopUp && <BatsuPopUp onClose={closeBatsuPopUp} />}
